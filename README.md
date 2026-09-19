@@ -26,6 +26,28 @@ Make sure to **Star** and **Watch** this space to stay updated as our toolkit li
 
 ---
 
+## Installation & Setup 🛠️
+
+Choose one of the two setup methods below to get started. 
+
+### Option A: Manual Installation (Highly Recommended & Stable) 🌟
+This script requires **FFmpeg** and **FFprobe** to be globally available in your system path environment variables:
+1. Download the Windows pre-compiled distribution package from [gyan.dev](https://gyan.dev).
+2. Extract the archive and copy the folder contents to `C:\ffmpeg`.
+3. Add `C:\ffmpeg\bin` to your user profile environment **Path** variable settings.
+4. Open a fresh Command Prompt and verify using: `ffmpeg -version`.
+5. Run `convert_audiophile_v4.bat` to launch the toolkit.
+
+### Option B: The Single-Click Automated Installer (Beta Testing) ⚠️
+We have included a shortcut script named **`setup_and_run.bat`** which automatically handles pulling components down from remote servers, unzipping packages, and injecting system environment variables using your command-line environment.
+> 🛑 **CAUTION / TESTING NOTICE:** This automated shortcut script is currently in an experimental phase. It can occasionally fail or throw errors due to restrictive Windows User Account Control (UAC) rules, firewall policies, or network configurations. **If it runs into an issue, please stick to the stable step-by-step instructions and tutorial layout in Option A above.**
+
+To attempt the automated install:
+1. Download `setup_and_run.bat`.
+2. **Right-click** the file and select **Run as administrator** (required for writing to your system Path variable).
+
+---
+
 ## Key Features ✨
 
 * **Bit-Perfect 24-Bit Transcoding:** Explicitly targets the `pcm_s24le` encoder map to preserve master audio dynamics without compressing or downsampling to standard 16-bit.
@@ -35,22 +57,10 @@ Make sure to **Star** and **Watch** this space to stay updated as our toolkit li
 
 ---
 
-## Prerequisites 🛠️
-
-This script requires **FFmpeg** and **FFprobe** to be globally available in your system path environment variables:
-
-1. Download the Windows pre-compiled distribution package from [gyan.dev](https://gyan.dev).
-2. Extract the archive and copy the folder contents to `C:\ffmpeg`.
-3. Add `C:\ffmpeg\bin` to your user profile environment **Path** variable settings.
-4. Open a fresh Command Prompt and verify using: `ffmpeg -version`.
-
----
-
 ## How to Use 🚀
 
-1. Download or clone `convert_audiophile_v4.bat` from this repository.
-2. Double-click the file to open the toolkit console.
-3. Select an operation profile configuration:
+1. Open the toolkit console (`convert_audiophile_v4.bat` or via the installer).
+2. Select an operation profile configuration:
    * **Option `1`:** Select a source FLAC directory and destination path via the visual browser menu window to run conversions.
    * **Option `2`:** Run a quick quality analysis audit on any folder to verify track alignment (`pcm_s24le` @ `96000 Hz / 192000 Hz`).
 
